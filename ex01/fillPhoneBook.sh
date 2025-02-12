@@ -8,13 +8,13 @@ ADD
 Alice
 Smith
 Ali
-111-1111
+111-1111-11
 Loves pizza
 ADD
 Bob
 Johnson
 Bobby
-222-2222
+22.22.222
 Afraid of heights
 ADD
 Carol
@@ -44,7 +44,7 @@ ADD
 Grace
 Miller
 Gracie
-777-7777
+077/777-7777
 Afraid of dogs
 ADD
 Slartisbartfast
@@ -53,6 +53,6 @@ Fjordmaster
 123/4567442
 Overly proud of Norway's coastline
 SEARCH
-5
+7
 EXIT
 EOF

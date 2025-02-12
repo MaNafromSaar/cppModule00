@@ -1,0 +1,60 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    readme                                             :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mnaumann <mnaumann@student.42heilbronn.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/02/12 18:42:04 by mnaumann          #+#    #+#              #
+#    Updated: 2025/02/12 19:03:09 by mnaumann         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+Notes on the account class exercise:
+
+- Header and tests were given so I knew what fields 
+make up the account class and what output to expect and even 
+the names of the functions to implement.
+
+- Using std:: up front with using declarations can improve readability
+and reduce the need to repeatedly qualify standard library names. This 
+approach is generally acceptable in source files (.cpp), but it is often 
+avoided in header files (.hpp) to prevent namespace pollution and potential 
+conflicts in larger projects.
+
+- The use of the keyword 'const' in a function declaration
+means that the function will not modify the object it is called on. This
+is a good practice to ensure that the object is not changed unintentionally.
+
+- The use of the keyword 'static' in a function declaration means that the
+function is not associated with any particular object instance, but rather
+with the class itself. This can be useful for utility functions that do not
+require access to object-specific data.
+
+- The underscore prefix is a common naming convention used to indicate that 
+a variable or function is private or for internal use within a class. This 
+helps distinguish between member variables and local variables or parameters 
+with similar names.
+
+- a constructor is a special member function that is called when an object is
+created. It is used to initialize the object's data members and set up any
+necessary resources. Constructors can have parameters to allow for different
+initialization options. (close to init in c)
+
+- a destructor is a special member function that is called when an object is
+destroyed. It is used to clean up any resources that the object has acquired
+during its lifetime, such as closing files or releasing memory. Destructors
+do not have parameters and are automatically called when an object goes out
+of scope or is explicitly deleted.
+
+- member functions are functions that are defined inside a class and operate
+on the object's data members. They can access the object's data through the
+'this' pointer, which points to the current object. Member functions can be
+called on object instances to perform operations or access data.
+
+- the functions themselves are pretty straightforward, they just perform
+simple calculations or operations on the account data members and have telling 
+names. The implementation is mostly just basic arithmetic and logic. 
+
+- a small test main helped me to verify that the functions were working as
+expected and producing the correct output.
