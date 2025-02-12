@@ -6,7 +6,7 @@
 /*   By: mnaumann <mnaumann@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 00:11:33 by mnaumann          #+#    #+#             */
-/*   Updated: 2025/02/12 14:44:45 by mnaumann         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:12:05 by mnaumann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,14 +100,18 @@ void PhoneBook::searchContact() const {
     string indexString;
 
     cout << endl;
+    cout << endl;
     cout << setw(10) << "Index" << "|";
     cout << setw(10) << "First Name" << "|";
     cout << setw(10) << "Last Name" << "|";
     cout << setw(10) << "Nickname" << "|" << endl;
+    cout << "_____________________________________________" << endl;
     for (int i = 0; i < 8; i++) {
         cout << setw(10) << i << "|";
         displayContact(i);
     }
+    cout << "_____________________________________________" << endl;
+    cout << endl;
     cout << "Enter index: ";
     getline(cin, indexString);
     try {
@@ -123,10 +127,18 @@ void PhoneBook::searchContact() const {
     }
 }
 
+string formatString(const string& str, size_t width) {
+    if (str.length() > width) {
+        return str.substr(0, width - 1) + ".";
+    } else {
+        return string(width - str.length(), ' ') + str;
+    }
+}
+
 void PhoneBook::displayContact(int index) const {
-    cout << setw(10) << contacts[index].getFirstName() << "|";
-    cout << setw(10) << contacts[index].getLastName() << "|";
-    cout << setw(10) << contacts[index].getNickname() << "|" << endl;
+    cout << formatString(contacts[index].getFirstName(), 10) << "|";
+    cout << formatString(contacts[index].getLastName(), 10) << "|";
+    cout << formatString(contacts[index].getNickname(), 10) << "|" << endl;
 }
 
 void PhoneBook::displayFullContact(int index) const {

@@ -26,13 +26,13 @@ ADD
 Dave
 Brown
 Davy
-444-4444
++49444-4444
 Secretly a superhero
 ADD
 Eva
 Jones
 Evie
-555-5555
+(0033)555-5555
 Can't stand chocolate
 ADD
 Frank
@@ -46,6 +46,12 @@ Miller
 Gracie
 777-7777
 Afraid of dogs
+ADD
+Slartisbartfast
+Magrathea
+Fjordmaster
+123/4567442
+Overly proud of Norway's coastline
 SEARCH
 5
 EXIT
