@@ -1,13 +1,14 @@
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++11
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -I. -std=c++11
 PATH_SRC = ./
+HEADERS = header.hpp
 SRCS = phonybook.cpp
 EXECS = $(SRCS:%.cpp=%)
 
 all: $(EXECS)
 
 %: $(PATH_SRC)%.cpp
-	$(CC) $(CFLAGS) $< -o $@
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 clean:
 	rm -f $(EXECS)

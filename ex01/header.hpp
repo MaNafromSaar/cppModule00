@@ -6,15 +6,17 @@
 /*   By: mnaumann <mnaumann@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 17:45:19 by mnaumann          #+#    #+#             */
-/*   Updated: 2025/02/12 00:29:24 by mnaumann         ###   ########.fr       */
+/*   Updated: 2025/02/12 14:26:34 by mnaumann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HEADER_HPP
 #define HEADER_HPP
 
+#include <iomanip>
 #include <iostream>
 #include <string>
+#include <cstring>
 
 class Contact {
 	private:
@@ -33,11 +35,11 @@ class Contact {
 			darkestSecret = d;
 		}
 	
-		std::string getFirstName() { return firstName; }
-		std::string getLastName() { return lastName; }
-		std::string getNickname() { return nickname; }
-		std::string getPhoneNumber() { return phoneNumber; }
-		std::string getDarkestSecret() { return darkestSecret; }
+		std::string getFirstName() const { return firstName; }
+		std::string getLastName() const { return lastName; }
+		std::string getNickname() const { return nickname; }
+		std::string getPhoneNumber() const { return phoneNumber; }
+		std::string getDarkestSecret() const { return darkestSecret; }
 };
 
 class PhoneBook {
@@ -50,6 +52,7 @@ class PhoneBook {
 		void addContact();
 		void searchContact() const;
 		void displayContact(int index) const;
+		void displayFullContact(int index) const;
 };
 	
 #endif
