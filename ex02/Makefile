@@ -15,10 +15,10 @@ $(EXECS): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(EXECS)
+	rm -f $(OBJS) $(EXECS)
 
 fclean: clean
-	rm -f phonybook
+	rm -f $(EXECS)
 re: fclean all
 
 .PHONY: all clean fclean re
